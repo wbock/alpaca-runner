@@ -1,5 +1,7 @@
 ## t-rex-runner Alpaca edition
 
+![](assets/alpaca-runner-logo.jpg)
+
 Reskin of the trex runner game extracted from chrome offline err page.
 
 ![](assets/alpaca-runner.gif)
