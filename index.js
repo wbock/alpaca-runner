@@ -118,7 +118,7 @@
         MAX_CLOUDS: 6,
         MAX_OBSTACLE_LENGTH: 3,
         MAX_OBSTACLE_DUPLICATION: 2,
-        MAX_SPEED: 13,
+        MAX_SPEED: 8,
         MIN_JUMP_HEIGHT: 35,
         MOBILE_SPEED_COEFFICIENT: 1.2,
         RESOURCE_TEMPLATE_ID: 'audio-resources',
@@ -202,7 +202,7 @@
      */
     Runner.keycodes = {
         JUMP: { '38': 1, '32': 1 },  // Up, spacebar
-        DUCK: { '40': 1 },  // Down
+        DUCK: { '40': 1, '17':1 },  // Down
         RESTART: { '13': 1 }  // Enter
     };
 
@@ -515,6 +515,9 @@
         clearCanvas: function () {
             this.canvasCtx.clearRect(0, 0, this.dimensions.WIDTH,
                 this.dimensions.HEIGHT);
+                // Set background color for canvas
+                this.canvasCtx.fillStyle = 'rgb(50,50,50)';
+                this.canvasCtx.fillRect(0,0,window.innerWidth,window.innerHeight);
         },
 
         /**
@@ -1464,7 +1467,7 @@
             yPos: [100, 75, 50], // Variable height.
             yPosMobile: [100, 50], // Variable height mobile.
             multipleSpeed: 999,
-            minSpeed: 8.5,
+            minSpeed: 0,
             minGap: 150,
             collisionBoxes: [
                 new CollisionBox(15, 15, 16, 5),
